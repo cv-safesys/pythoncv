@@ -1,9 +1,9 @@
-# Система распознавания людей в помещении с e-mail оповещением
+# System for recognizing people in the room with e-mail notification
 
-Концепция проекта заключается в разработке устройства охранной системы на основе компьютерного зрения. Алгоритм базируется на цветовой сегментации - наличие у человека униформы уникального цвета для этого помещения, и на идентификации человека с помощью распознавания лица. 
+The concept of the project is to develop a security system based on computer vision. The algorithm is based on color segmentation - whether a person has a uniform of a unique color for this room, and on identifying a person using facial recognition.
 
-## Принцип работы. 
+## Principle of operation.
 
-Попадающий в помещение человек уже издалека определяется как человек (с помощью распознавания лица). Далее алгоритм смотрит наличие уникального цвета в кадре (униформа). Если цвет в необходимом диапазоне не обнаруживается, то на почту отправляется сообщение о нахождении постороннего человека. При положительном результате по распознаванию лица и цвета следует второй этап - идентификация. Человеку в ограниченный промежуток времени необходимо подойти к камере для идентификации его как сотрудника (его лицо заранее присутвует в базе). Данный шаг используется для предотвращения нахождения посторонних лиц, одетых в униформу. При успешном прохождении идентификации отправляется информационное письмо с указанием имени сотрудника, находящегося в помещении. В противном случае - отправляется предупреждающее письмо о наличии в помещении постороннего лица. Для прохождения идентификации будет установлен порог схожести (минимальное значение допуска), которое будет установлено нами на практике.
+A person entering a room from a distance is identified as a person (using facial recognition). Next, the algorithm looks at the presence of a unique color in the frame (uniform). If the color in the required range is not detected, a message is sent to the email about the presence of a stranger. If the result is positive for face and color recognition, the second step is identification. A person in a limited period of time must approach the camera to identify him as an employee (his face is present in the database in advance). This step is used to prevent unauthorized persons wearing uniforms from being found. If identification is successful, an informational message is sent with the name of the employee who is in the room. Otherwise, a warning message is sent about the presence of an unauthorized person in the room. In order to pass the identification, a similarity threshold will be set (the minimum tolerance value), which will be set by us in practice.
 
-Работа алгоритма базируется на Python 3.7 с использованием библиотеки OpenCV.
+The algorithm is based on Python 3.7 using the OpenCV library.
