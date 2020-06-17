@@ -46,8 +46,8 @@ def live_video(camera_port=0):
             	cv2.circle(frame, (x,y), 10, (0,0,255), -1)
             	cv2.putText(frame, "%d-%d" % (x,y), (x+50, y-50), cv2.FONT_HERSHEY_SIMPLEX,1,color_yellow,2)
             	
-            cv2.imshow('mask',mask)
-            cv2.imshow('kek',frame)
+            #cv2.imshow('mask',mask)
+            #cv2.imshow('final',frame)
 
 
 
@@ -58,7 +58,7 @@ def live_video(camera_port=0):
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
 
-        # When everything is done, release the capture
+        
 	#video_capture.release()
 	#cv2.destroyAllWindows() 
 live_video()
